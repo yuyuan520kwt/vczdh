@@ -21,10 +21,10 @@ jobs:
         cache: gradle
 
     - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
+      uses: android-actions/setup-android@v2
       with:
         api-level: 33
-        packages: build-tools-33.0.2
+        build-tools-version: 33.0.2
 
     - name: Build with system Gradle
       run: gradle assembleRelease
