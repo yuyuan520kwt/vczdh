@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/payment_dialog_background"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="错误词汇"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_error_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="共有X个错误词汇"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_error_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:id="@+id/scroll_error_words"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_error_count"
+        android:layout_marginBottom="24dp"
+        android:maxHeight="200dp">
+
+        <LinearLayout
+            android:id="@+id/ll_error_words"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 错误词汇将通过代码动态添加 -->
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_revise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_revise"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingVertical="12dp"
+        android:layout_below="@+id/scroll_error_words" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_close"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingVertical="12dp"
+        android:layout_below="@+id/btn_revise"
+        android:layout_marginTop="8dp" />
+</RelativeLayout>
